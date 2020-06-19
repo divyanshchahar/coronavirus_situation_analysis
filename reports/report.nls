@@ -1,0 +1,16 @@
+
+\begin{thenomenclature} 
+\nomgroup{A}
+  \item [{$A_0$}]\begingroup value at time $t=0$\nomeqref {0}\nompageref{3}
+  \item [{$D$}]\begingroup number of deaths\nomeqref {0}\nompageref{2}
+  \item [{$I$}]\begingroup number of infected individuals\nomeqref {0}\nompageref{2}
+  \item [{$R$}]\begingroup Number of Recovered Cases\nomeqref {0}\nompageref{2}
+  \item [{$t$}]\begingroup time\nomeqref {0}\nompageref{2}
+  \item [{k}]\begingroup growt/decay Rate\nomeqref {0}\nompageref{3}
+  \item [{t}]\begingroup time interval in days\nomeqref {0}\nompageref{3}
+  \item [{y}]\begingroup value at time $t$\nomeqref {0}\nompageref{3}
+\nomgroup{B}
+  \item [{$\beta$}]\begingroup mortality facotr\nomeqref {0}\nompageref{2}
+  \item [{$\sigma$}]\begingroup recovery ratio\nomeqref {0}\nompageref{2}
+
+\end{thenomenclature}

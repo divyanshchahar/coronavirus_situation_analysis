@@ -1,0 +1,10 @@
+\nomenclatureentry{B$\beta$@[{$\beta$}]\begingroup mortality facotr\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{A$I$@[{$I$}]\begingroup number of infected individuals\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{A$D$@[{$D$}]\begingroup number of deaths\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{A$t$@[{$t$}]\begingroup time\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{B$\sigma$@[{$\sigma$}]\begingroup recovery ratio\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{A$R$@[{$R$}]\begingroup Number of Recovered Cases\nomeqref {0}|nompageref}{2}
+\nomenclatureentry{Ay@[{y}]\begingroup value at time $t$\nomeqref {0}|nompageref}{3}
+\nomenclatureentry{A$A_0$@[{$A_0$}]\begingroup value at time $t=0$\nomeqref {0}|nompageref}{3}
+\nomenclatureentry{Ak@[{k}]\begingroup growt/decay Rate\nomeqref {0}|nompageref}{3}
+\nomenclatureentry{At@[{t}]\begingroup time interval in days\nomeqref {0}|nompageref}{3}

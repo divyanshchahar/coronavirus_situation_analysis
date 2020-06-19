@@ -1,0 +1,27 @@
+\begin{thebibliography}{1}
+
+\bibitem{kermack1927contribution}
+W.~O. Kermack and A.~G. McKendrick, ``A contribution to the mathematical theory
+  of epidemics,'' {\em Proceedings of the royal society of london. Series A,
+  Containing papers of a mathematical and physical character}, vol.~115,
+  no.~772, pp.~700--721, 1927.
+
+\bibitem{chowell2016growing}
+G.~Chowell and C.~Viboud, ``Is it growing exponentially fast?--impact of
+  assuming exponential growth for characterizing and forecasting epidemics with
+  initial near-exponential growth dynamics,'' {\em Infectious disease
+  modelling}, vol.~1, no.~1, pp.~71--78, 2016.
+
+\bibitem{Abramson2015}
+J.~Abramson, V.~Falduto, R.~Gross, D.~Lippman, M.~Rasmussen, C.~Fernandez,
+  H.~Whipple, J.-M. Magnier, R.~Norwood, and N.~Belloit, {\em {College
+  Algebra}}.
+\newblock Houston: OpenStax, 2015.
+
+\bibitem{divyansh_covid_1}
+``Sars-cov-2: An analysis of spread of infection.''
+  \url{https://github.com/divyanshchahar/coronavirus_confirmed_analysis/tree/master/reports},
+  June 2020.
+\newblock Accessed: 19 June 2020.
+
+\end{thebibliography}

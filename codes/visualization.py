@@ -1,12 +1,12 @@
 # FUNCTION TO GENERATE HORIZONTAL BAR PLOTS
 #
 # Input Arguments
-#   -   Values for Y-axis(two lists)
-#   -   Name of groups
-#   -   X-axis Labels
-#   -   Y-axis Labels
-#   -   X-axis Tick Labels
-#   -   Name of the plot
+#   -   y1_values, y2_values - [List] - Values for Y-axis(two lists)
+#   -   group_plt - [list] - Name of groups
+#   -   label_x - [list] - X-axis Labels
+#   -   label_y - [list] - Y-axis Labels
+#   -   xticklabels_plt - [list] - X-axis Tick Labels
+#   -   filename_plt - [string] - Name of the plot
 # Output Arguments
 #   -   Grouped Horizontal Bar plot
 def plot_bar_grouped(y1_values, y2_values, group_plt, label_x, label_y, xticklabels_plt, filename_plt):
@@ -51,15 +51,15 @@ def plot_bar_grouped(y1_values, y2_values, group_plt, label_x, label_y, xticklab
 # FUNCTION TO PLOT LINE GRAPHS
 #
 # Input Arguments:
-#   -   Values for x-axis
-#   -   Values for y-axis
-#   -   Labels for Lines
-#   -   Labels for x-axis
-#   -   Labels for y-axis
-#   -   Plot for title
+#   -   x_values - [list of lists] - Values for x-axis
+#   -   y_values - [list of lists] - Values for y-axis
+#   -   legend_plt - [list] - Labels for Lines
+#   -   x_label - [string] - Labels for x-axis
+#   -   y_label - [string] - Labels for y-axis
+#   -   filename_plt - [string] - name of the file
 #
 # Output Arguments:
-#   -   Line Plot
+#   -   Line Plot(dates)
 def lineplotter(x_values, y_values, legend_plt, x_label, y_label, filename_plt):
     fig, ax = plt.subplots()
 
@@ -98,15 +98,15 @@ def lineplotter(x_values, y_values, legend_plt, x_label, y_label, filename_plt):
 # FUNCTION TO PLOT LINE GRAPHS (SUBPLOTS)
 #
 # Input Arguments:
-#   -   Number of Rows
-#   -   Number of Columns
-#   -   Values for x-axis
-#   -   Values for y-axis
-#   -   Labels for Lines
-#   -   Filename to save the Graph
+#   -   r_plt - [integer] -Number of Rows
+#   -   c_plt - [integer] - Number of Columns
+#   -   x_values - [list of lists] - Values for x-axis
+#   -   y_values - [list of lists] - Values for y-axis
+#   -   legend_plt - [list] - Labels for Lines
+#   -   filename_plt - [string] - name of the file
 #
 # Output Arguments:
-#   -   Line Plot
+#   -   Multiple Line Plots (Dates)
 def lineplotter_subplot(r_plt, c_plt, x_values, y_values, legend_plt, filename_plt):
     fig, ax = plt.subplots(r_plt, c_plt, sharex=True, sharey=True)  # axis for subplots
 
@@ -148,15 +148,15 @@ def lineplotter_subplot(r_plt, c_plt, x_values, y_values, legend_plt, filename_p
 # FUNCTION TO PLOT LINE GRAPHS
 #
 # Input Arguments:
-#   -   Values for x-axis
-#   -   Values for y-axis
-#   -   Labels for Lines
-#   -   Labels for x-axis
-#   -   Labels for y-axis
-#   -   Plot for title
+#   -   x_values - [list of lists] - Values for x-axis
+#   -   y_values - [list of lists] - Values for y-axis
+#   -   legend_plt - [list] - Labels for Lines
+#   -   x_label - [string] - Labels for x-axis
+#   -   y_label - [string]Labels for y-axis
+#   -   filename_plt - [string] - name of the file
 #
 # Output Arguments:
-#   -   Line Plot
+#   -   Line Plot (Numbers)
 def lineplotter_number(x_values, y_values, legend_plt, x_label, y_label, filename_plt):
     fig, ax = plt.subplots()
 
@@ -190,15 +190,15 @@ def lineplotter_number(x_values, y_values, legend_plt, x_label, y_label, filenam
 # FUNCTION TO PLOT LINE GRAPHS
 #
 # Input Arguments:
-#   -   Values for x-axis
-#   -   Values for y-axis
-#   -   Labels for Lines
-#   -   Labels for x-axis
+#   -   x_values - [list of lists] - Values for x-axis
+#   -   y_values - [list of lists] - Values for y-axis
+#   -   legend_plt - [list] - Labels for Lines
+#   -   x_label - [string] - Labels for x-axis
 #   -   Labels for y-axis
-#   -   Plot for title
+#   -   filename_plt - [string] - name of the file
 #
 # Output Arguments:
-#   -   Line Plot
+#   -   Line Plot(Numbers - logarithmic scale for both axis)
 def lineplotter_number_log(x_values, y_values, legend_plt, x_label, y_label, filename_plt):
     fig, ax = plt.subplots()
 
@@ -235,17 +235,16 @@ def lineplotter_number_log(x_values, y_values, legend_plt, x_label, y_label, fil
 # FUNCTION TO PLOT LINE GRAPHS (SUBPLOTS)
 #
 # Input Arguments:
-#   -   Number of Rows
+#   -   r_plt - [integer] - Number of Rows
 #   -   Number of Columns
-#   -   Values for x-axis
-#   -   Values for y-axis
-#   -   Labels for Lines
-#   -   Filename to save the Graph
+#   -   x_values1, x_values2 - [list of lists] - Values for x-axis
+#   -   y_values1, y_values1 - [list of lists] - Values for y-axis
+#   -   legend_plt - [list] - Labels for Lines
+#   -   filename_plt - [string] - name of the file
 #
 # Output Arguments:
 #   -   Line Plot (subplots with each plot represeneting multiple values
-def lineplotter_subplot_multivalues(r_plt, c_plt, x_values_1, x_values_2, y_values_1, y_values_2, legend_plt,
-                                    filename_plt):
+def lineplotter_subplot_multivalues(r_plt, c_plt, x_values_1, x_values_2, y_values_1, y_values_2, legend_plt, filename_plt):
     fig, ax = plt.subplots(r_plt, c_plt, sharex=True, sharey=True)  # axis for subplots
 
     l = len(x_values_1)  # length of the concerned lists
@@ -296,17 +295,17 @@ def lineplotter_subplot_multivalues(r_plt, c_plt, x_values_1, x_values_2, y_valu
 # FUNCTION TO PLOT LINE GRAPHS (SUBPLOTS)
 #
 # Input Arguments:
-#   -   Number of Rows
+#   -   r_plt - [integer] - Number of Rows
 #   -   Number of Columns
-#   -   Values for x-axis
-#   -   Values for y-axis
-#   -   Labels for Lines
-#   -   Filename to save the Graph
+#   -   x_values - [list of lists] - Values for x-axis
+#   -   y_values - [list of lists] - Values for y-axis
+#   -   legend_plt - [list] - Labels for Lines
+#   -   filename_plt - [string] - name of the file
 #
 # Output Arguments:
-#   -   Line Plot
-def lineplotter_subplot_multivalues_limit1(r_plt, c_plt, x_values_1, x_values_2, y_values_1, y_values_2, legend_plt,
-                                           filename_plt):
+#   -   Multiple Line Plots (Y-axis values limited to a specific range)
+def lineplotter_subplot_multivalues_limit1(r_plt, c_plt, x_values_1, x_values_2, y_values_1, y_values_2, legend_plt, filename_plt):
+
     fig, ax = plt.subplots(r_plt, c_plt, sharex=True, sharey=True)  # axis for subplots
 
     l = len(x_values_1)  # length of the concerned lists
@@ -354,11 +353,11 @@ def lineplotter_subplot_multivalues_limit1(r_plt, c_plt, x_values_1, x_values_2,
 # FUNCTION TO STRIP OFF ZEROS
 #
 # Input Arguments
-#   -   Database from which 0 needs to be stripped before first non-zero values
-#   -   List of countries for which above mentioned operation needs to be performed
+#   -   df - [pandas dataframe] - Database from which 0 needs to be stripped before first non-zero values
+#   -   filtervalues - [list] - List of countries for which above mentioned operation needs to be performed
 # Output Arguments
-#   -   List of Numbers after stripping the zeros (list of lists)
-#   -   List of Dates(the dates for which zeros are removed are droped) (list of lists)
+#   -   x_values - [list of lists] - List of Dates(the dates for which zeros are removed are droped)
+#   -   y_values - [list of lists] - List of Numbers after stripping the zeros
 def zerostrip(df, filtervalues):
     dates = df.drop(['Country'], axis=1).columns.values.tolist()  # extracting dates
     df = df[df.Country.isin(filtervalues)]  # filtering required values of the worst hit countries
@@ -384,14 +383,14 @@ def zerostrip(df, filtervalues):
     return x_values, y_values
 
 
-# FUNCTION TO STRIP OFF ZEROS
+# FUNCTION TO STRIP OFF NEGITIVE VALUES
 #
 # Input Arguments
-#   -   Database from which negitive values needs to stripped from the begining and from the end
-#   -   List of countries for which above mentioned operation needs to be performed
+#   -   df - [pandas dataframe] - Database from which negitive values needs to stripped from the begining and from the end
+#   -   filtervalues - [list] - List of countries for which above mentioned operation needs to be performed
 # Output Arguments
-#   -   List of Numbers after stripping the zeros (list of lists)
-#   -   List of Dates(the dates for which zeros are removed are droped) (list of lists)
+#   -   x_values - [list of lists] - List of Dates(the dates for which negitive values are removed are droped)
+#   -   y_values - [list of lists] - List of Numbers after stripping the negitive values
 def negstrip(df, filtervalues):
     dates = df.drop(['Country'], axis=1).columns.values.tolist()  # extracting dates
     df = df[df.Country.isin(filtervalues)]  # filtering required values of the worst hit countries
@@ -422,9 +421,9 @@ def negstrip(df, filtervalues):
 # FUNCTION TO CONVERT DATES(STRING VALUES FROM DATABASE) TO DATES(DATES TYPE)
 #
 # Input Arguments:
-#   -   List of Lists with dates as strings
+#   -   listoflist_dates - [list of lists] - Dates as strings
 # Output Arguments:
-#   -   List of Lists with dates as date/time
+#   -   listoflist_dates - [list of lists] - Dates as date/time
 def datesorter(listoflist_dates):
     # Correcting for year
     length_listoflist_dates = len(listoflist_dates)
@@ -465,9 +464,9 @@ def datesorter(listoflist_dates):
 # FUNCTION TO RECIVE TWO STRINGS OF UNEQUAL LENGTH AND SLICE THEM TO EQUAL LENGTH
 #
 # Input Parameters
-#   -   Two lists of unequal length
+#   -   x_values, y_values - [list of lists] - Two lists of unequal length
 # Output Parameters
-#   -   Two lists of equal length
+#   -    x_values_final, y_values_final - [list of lists] - Two lists of equal length
 def listequalizer(x_values, y_values):
     length_x_values = len(x_values)
 
@@ -510,8 +509,7 @@ df_recovered_average = pd.read_csv('recovered_average.csv')  # Average Recovered
 df_recoveryratio = pd.read_csv('recoveryratio.csv')  # Recovery Ratio
 df_recoveryratio_movingaverage = pd.read_csv('recoveryratio_movingaverage.csv')  # Moving Average of Recovery Ratio
 df_mortalityfactor = pd.read_csv('mortalityfactor.csv')  # Mortality Factor
-df_mortalityfactor_movingaverage = pd.read_csv(
-    'mortalityfactor_movingaverage.csv')  # Moving Average of Mortality Factor
+df_mortalityfactor_movingaverage = pd.read_csv('mortalityfactor_movingaverage.csv')  # Moving Average of Mortality Factor
 df_newcases = pd.read_csv('newcases.csv')  # New Cases of coronavirus
 df_growthrate = pd.read_csv('growthrate.csv')  # Growth Rate
 df_growthrate_movingaverage = pd.read_csv('growthrate_movingaverage.csv')  # Mooving Average of Growth Rate
@@ -531,8 +529,7 @@ lastday = dates[len(dates) - 1]  # selecting last day entry
 lastdaycases = df_coronaC[lastday].values.tolist()  # list of cases on last day
 data = {'Country': countries, lastday: lastdaycases}  # creating dictionary to create DataFrame
 df_coronaC_lastday = pd.DataFrame(data)  # DataFrame with number of confirmed cases
-df_coronaC_worstaffected = df_coronaC_lastday.sort_values(lastday, ascending=False).head(
-    10)  # Dataframe of 10 worst affected countries
+df_coronaC_worstaffected = df_coronaC_lastday.sort_values(lastday, ascending=False).head(10)  # Dataframe of 10 worst affected countries
 countries_P1 = df_coronaC_worstaffected['Country'].values.tolist()  # list of countries from the the previous DataFrame
 
 countries_P1.sort()

@@ -1,8 +1,8 @@
 # FUNCTION TO CALCULATE AVERAGE CASSES RECORDED (last day cases/ number of days the infections were reported)
 # Input Arguments:
-#   -   Dataframe with numbers of interest(confirmed cases/deaths/recovered) per day (grouped by country)
+#   -   df - [pandas dataframe] Dataframe with numbers of interest(confirmed cases/deaths/recovered) per day (grouped by country)
 # Output Arguments
-#   -   Dataframe with country names and average cases
+#   -   df_final - [pandas dataframe] - Dataframe with country names and average cases
 def average_calculator(df):
     countries = df['Country'].values.tolist() # extracting name of the countries
     length_countries = len(countries)
@@ -25,9 +25,9 @@ def average_calculator(df):
 # FUNCTION TO CALCULATE GROWTH RATE
 #
 # Input Arguments:
-#   -   Dataframe with numbers of interest(confirmed cases/deaths/recovered) per day (grouped by country)
+#   -   df - [pandas dataframe] - Dataframe with numbers of interest(confirmed cases/deaths/recovered) per day (grouped by country)
 # Output Parameters:
-#   -   DataFrame with growth rate for each each for all countries
+#   -   df_final - [pandas_dataframe] - DataFrame with growth rate for each day for all countries
 def growthrate_calculator(df):
     countries = df['Country'].values.tolist()  # extracting name of the countries
     dates = df.drop(['Country'], axis=1).columns.values.tolist()  # extracting dates
@@ -74,9 +74,9 @@ def growthrate_calculator(df):
 # FUNCTION TO CALCULATE NEW CASES EVERYDAY
 #
 # Input Arguments:
-#   -   Dataframe with numbers of interest(confirmed cases/deaths/recovered) per day (grouped by country)
+#   -   df - [pandas dataframe] - Dataframe with numbers of interest(confirmed cases/deaths/recovered) per day (grouped by country)
 # Output Parameters:
-#   -   DataFrame with new instances of number of interest(confirmed cases/deaths/recovered)
+#   -   df_final - [pandas_dataframe] - DataFrame with new instances of number of interest(confirmed cases/deaths/recovered)
 def newinstance_calculator(df):
     countries = df['Country'].values.tolist()  # extracting name of the countries
     dates = df.drop(['Country'], axis=1).columns.values.tolist()  # extracting dates
@@ -118,9 +118,9 @@ def newinstance_calculator(df):
 
 # FUNCTION TO CALCULATE MOVING AVERAGE
 # Input Parameters:
-#   -   Dataframe with numbers of interest(confirmed cases/deaths/recovered) per day (grouped by country)
+#   -   df - [pandas dataframe] - Dataframe with numbers of interest(confirmed cases/deaths/recovered) per day (grouped by country)
 # Output Parameters:
-#   -   Dataframe with progression of number of interst(confirmed cases/deaths/recovered)
+#   -   -   df_final - [pandas dataframe] - Dataframe with moving average of number of interst(confirmed cases/deaths/recovered)
 def cummulativeaverage_calculator(df):
     t = 7 # time period for mooving averages
     countries = df['Country'].values.tolist()  # extracting name of the countries
@@ -189,9 +189,9 @@ def cummulativeaverage_calculator(df):
 # FUNCTION TO CALCULATE GROWTH RATE
 #
 # Input Arguments:
-#   -   Dataframe with numbers of interest(confirmed cases/deaths/recovered) per day (grouped by country)
+#   -   df - [pandas dataframe] - Dataframe with numbers of interest(confirmed cases/deaths/recovered) per day (grouped by country)
 # Output Parameters:
-#   -   DataFrame with growth ratio for each of the countries [df1/df2]
+#   -   df_final - [pandas dataframe] - DataFrame with growth ratio for each of the countries [df1/df2]
 def ratio_calculator(df1,df2):
     countries = df1['Country'].values.tolist()  # extracting name of the countries
     dates = df1.drop(['Country'], axis=1).columns.values.tolist()  # extracting dates
@@ -244,7 +244,7 @@ import numpy as np
 
 ####____________________________________________________ Reading the Databases _________________________________________________________________________###
 
-# Confirmed Casses of Corona Virus (Globally) (Database of John Hopkins University)
+#(D atabase of John Hopkins University)
 df_coronaC_global = pd.read_csv(r'COVID-19-master\COVID-19-master\csse_covid_19_data\csse_covid_19_time_series\time_series_covid19_confirmed_global.csv') # Confirmed Cases of Coronavirus
 df_coronaD_global = pd.read_csv(r'COVID-19-master\COVID-19-master\csse_covid_19_data\csse_covid_19_time_series\time_series_covid19_deaths_global.csv') # Deaths due to Coronavirus
 df_coronaR_global = pd.read_csv(r'COVID-19-master\COVID-19-master\csse_covid_19_data\csse_covid_19_time_series\time_series_covid19_recovered_global.csv') # Recoveris from Coronavirus
